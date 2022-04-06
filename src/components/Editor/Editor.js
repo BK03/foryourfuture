@@ -235,7 +235,7 @@ function Editor(props) {
             setValues((prev) => ({ ...prev, name: event.target.value }))
           }
         />
-         <ImageUploader
+         {/* <ImageUploader
               withIcon={false}
               withPreview={true}
               label=""
@@ -244,7 +244,7 @@ function Editor(props) {
               imgExtension={[".jpg", ".gif", ".png", ".gif", ".svg"]}
               maxFileSize={1048576}
               fileSizeError=" file size is too big"
-            />
+            /> */}
         <InputControl
           label="Title"
           value={values.title}
