@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import ReactToPrint from "react-to-print";
-import { ArrowDown } from "react-feather";
+import { AiOutlineArrowDown } from "react-icons/ai";
 
 import Editor from "../Editor/Editor";
 import Resume from "../Resume/Resume";
@@ -61,7 +61,7 @@ function Body() {
 
   return (
     <div className={styles.container}>
-      <p className={styles.heading}>Resume Builder</p>
+      <p className={styles.heading}>For Your Future !!!</p>
       <div className={styles.toolbar}>
         <div className={styles.colors}>
           {colors.map((item) => (
@@ -79,7 +79,7 @@ function Body() {
           trigger={() => {
             return (
               <button>
-                Download <ArrowDown />
+                Print <AiOutlineArrowDown />
               </button>
             );
           }}

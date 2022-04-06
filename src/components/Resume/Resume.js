@@ -1,13 +1,7 @@
 import React, { forwardRef, useEffect, useRef, useState } from "react";
-import {
-  AtSign,
-  Calendar,
-  GitHub,
-  Linkedin,
-  MapPin,
-  Paperclip,
-  Phone,
-} from "react-feather";
+
+import { FiGithub,FiAtSign,FiPaperclip,FiMapPin,FiPhone } from "react-icons/fi";
+import { AiOutlineCalendar,AiOutlineLinkedin } from "react-icons/ai";
 
 import styles from "./Resume.module.css";
 
@@ -64,7 +58,7 @@ const Resume = forwardRef((props, ref) => {
               )}
               {item.certificationLink ? (
                 <a className={styles.link} href={item.certificationLink}>
-                  <Paperclip />
+                  <FiPaperclip />
                   {item.certificationLink}
                 </a>
               ) : (
@@ -72,15 +66,15 @@ const Resume = forwardRef((props, ref) => {
               )}
               {item.startDate && item.endDate ? (
                 <div className={styles.date}>
-                  <Calendar /> {getFormattedDate(item.startDate)}-
+                  <AiOutlineCalendar /> {getFormattedDate(item.startDate)}-
                   {getFormattedDate(item.endDate)}
                 </div>
               ) : (
                 <div />
               )}
               {item.location ? (
-                <p className={styles.date}>
-                  <MapPin /> Remote
+                <p className={styles.location}>
+                  <FiMapPin />{item.location}
                 </p>
               ) : (
                 <span />
@@ -122,7 +116,7 @@ const Resume = forwardRef((props, ref) => {
               )}
               {item.link ? (
                 <a className={styles.link} href={item.link}>
-                  <Paperclip />
+                  <FiPaperclip />
                   {item.link}
                 </a>
               ) : (
@@ -130,7 +124,7 @@ const Resume = forwardRef((props, ref) => {
               )}
               {item.github ? (
                 <a className={styles.link} href={item.github}>
-                  <GitHub />
+                  <FiGithub />
                   {item.github}
                 </a>
               ) : (
@@ -185,7 +179,7 @@ const Resume = forwardRef((props, ref) => {
               )}
               {item.startDate && item.endDate ? (
                 <div className={styles.date}>
-                  <Calendar /> {getFormattedDate(item.startDate)} -
+                  <AiOutlineCalendar /> {getFormattedDate(item.startDate)} -
                   {getFormattedDate(item.endDate)}
                 </div>
               ) : (
@@ -313,28 +307,28 @@ const Resume = forwardRef((props, ref) => {
           <div className={styles.links}>
             {info.basicInfo?.detail?.email ? (
               <a className={styles.link} type="email">
-                <AtSign /> {info.basicInfo?.detail?.email}
+                <FiAtSign /> {info.basicInfo?.detail?.email}
               </a>
             ) : (
               <span />
             )}
             {info.basicInfo?.detail?.phone ? (
               <a className={styles.link}>
-                <Phone /> {info.basicInfo?.detail?.phone}
+                <FiPhone /> {info.basicInfo?.detail?.phone}
               </a>
             ) : (
               <span />
             )}
             {info.basicInfo?.detail?.linkedin ? (
               <a className={styles.link}>
-                <Linkedin /> {info.basicInfo?.detail?.linkedin}
+                <AiOutlineLinkedin /> {info.basicInfo?.detail?.linkedin}
               </a>
             ) : (
               <span />
             )}
             {info.basicInfo?.detail?.github ? (
               <a className={styles.link}>
-                <GitHub /> {info.basicInfo?.detail?.github}
+                <FiGithub /> {info.basicInfo?.detail?.github}
               </a>
             ) : (
               <span />

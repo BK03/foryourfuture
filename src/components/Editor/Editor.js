@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { X } from "react-feather";
 
+import { AiOutlineClose } from "react-icons/ai";
 import InputControl from "../InputControl/InputControl";
 
 import styles from "./Editor.module.css";
@@ -19,8 +19,10 @@ function Editor(props) {
   const [sectionTitle, setSectionTitle] = useState(
     sections[Object.keys(sections)[0]]
   );
+
   const [values, setValues] = useState({
     name: activeInformation?.detail?.name || "",
+    image: activeInformation?.detail?.image || "",
     title: activeInformation?.detail?.title || "",
     linkedin: activeInformation?.detail?.linkedin || "",
     github: activeInformation?.detail?.github || "",
@@ -69,7 +71,7 @@ function Editor(props) {
         />
         <InputControl
           label="Location"
-          placeholder="Enter location eg. Remote"
+          placeholder="Enter location eg. "
           value={values.location}
           onChange={(event) =>
             setValues((prev) => ({ ...prev, location: event.target.value }))
@@ -123,7 +125,7 @@ function Editor(props) {
         <InputControl
           label="Title"
           value={values.title}
-          placeholder="Enter title eg. Chat app"
+          placeholder="Enter title eg. App"
           onChange={(event) =>
             setValues((prev) => ({ ...prev, title: event.target.value }))
           }
@@ -227,12 +229,22 @@ function Editor(props) {
       <div className={styles.row}>
         <InputControl
           label="Name"
-          placeholder="Enter your full name eg. Aashu"
+          placeholder="Enter your full name eg. BK"
           value={values.name}
           onChange={(event) =>
             setValues((prev) => ({ ...prev, name: event.target.value }))
           }
         />
+         <ImageUploader
+              withIcon={false}
+              withPreview={true}
+              label=""
+              buttonText="Upload Images"
+              onChange={this.onDrop}
+              imgExtension={[".jpg", ".gif", ".png", ".gif", ".svg"]}
+              maxFileSize={1048576}
+              fileSizeError=" file size is too big"
+            />
         <InputControl
           label="Title"
           value={values.title}
@@ -626,7 +638,7 @@ function Editor(props) {
                   <p>
                     {sections[activeSectionKey]} {index + 1}
                   </p>
-                  <X
+                  <AiOutlineClose
                     onClick={(event) => {
                       event.stopPropagation();
                       handleDeleteDetail(index);
