@@ -303,7 +303,7 @@ const Resume = forwardRef((props, ref) => {
         <div className={styles.header}>
           <p className={styles.heading}>{info.basicInfo?.detail?.name}</p>
           <p className={styles.subHeading}>{info.basicInfo?.detail?.title}</p>
-
+          <img className={styles.image}>{info.basicInfo?.detail?.image}</img>
           <div className={styles.links}>
             {info.basicInfo?.detail?.email ? (
               <a className={styles.link} type="email">

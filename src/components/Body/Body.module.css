@@ -63,3 +63,10 @@
   gap: 30px;
   width: 100%;
 }
+
+.slogen {
+  background-clip: text;
+  background-image: linear-gradient(to right, #239ce2, #1369b9);
+  color: transparent;
+
+}

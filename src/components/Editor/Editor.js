@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 import { AiOutlineClose } from "react-icons/ai";
+
+
 import InputControl from "../InputControl/InputControl";
 
 import styles from "./Editor.module.css";
@@ -661,6 +663,7 @@ function Editor(props) {
 
         <button onClick={handleSubmission}>Save</button>
       </div>
+      
     </div>
   );
 }
