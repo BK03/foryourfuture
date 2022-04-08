@@ -10,7 +10,7 @@ function Footer() {
       
       
       <p className={styles.heading}>
-         <span>BK </span> <span className={styles.footericon}><FaHandHoldingHeart /></span>
+         <span>BK </span>  <span className={styles.footericon}> with <FaHandHoldingHeart /></span>
         </p>
    
      </div>

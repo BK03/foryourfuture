@@ -1,0 +1,44 @@
+.app {
+  color: var(--text-primary);
+  background-color: var(--background);
+  padding: 2px;
+  height: auto;
+  font-size: large;
+  font-weight: bold;
+  transition: all .5s;
+}
+
+
+.button{
+ border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-primary);  
+  background-color: var(--background);
+  border: 2px var(--text-primary) solid;
+  padding:10px 5px;
+  position: relative;
+  overflow: hidden;
+
+
+}
+
+.button::after{
+  content: 'D';
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 0px;
+  height: 100%;
+  color:white;
+  background-color: var(--background);
+  transform: skewX(35deg);
+  z-index: -1;
+  transition: width 1s;
+}
+
+.button:hover::after{
+  width: 150%;
+}
+
