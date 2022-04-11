@@ -88,17 +88,21 @@ function Body() {
         />
       </div>
       <div className={styles.main}>
+      <div className={styles.editor}>
         <Editor
           sections={sections}
           information={resumeInformation}
           setInformation={setResumeInformation}
         />
+        </div>
+        <div className={styles.resumeview}>
         <Resume
           ref={resumeRef}
           sections={sections}
           information={resumeInformation}
           activeColor={activeColor}
         />
+      </div>
       </div>
     </div>
   );
