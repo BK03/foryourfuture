@@ -37,8 +37,10 @@
 }
 
 .header .active {
-  border-bottom: 2px solid #239ce2;
-  color: #239ce2;
+  border-bottom: 2px solid #125C13;
+  color: #fff;
+  background-color: #239ce2;
+  border-radius:5px;
 }
 
 .body {
@@ -58,6 +60,7 @@
 .detail .row {
   display: flex;
   gap: 20px;
+  
 }
 .detail .column {
   display: flex;
@@ -128,4 +131,5 @@
 
 .body button:active {
   transform: translateY(2px);
+
 }

@@ -61,7 +61,7 @@ function Body() {
 
   return (
     <div className={styles.container}>
-      <p className={styles.heading}>For Your <span className={styles.slogen}>F</span>uture !!! <br></br><span className={styles.slogen}>It's free</span></p>
+      <p className={styles.heading}>For Your <span className={styles.slogen}>F</span>uture !!! <br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className={styles.slogen}>It's free</span></p>
       
       <div className={styles.toolbar}>
         <div className={styles.colors}>

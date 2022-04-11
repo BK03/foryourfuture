@@ -7,6 +7,10 @@
   font-weight: bold;
   transition: all .5s;
 }
+.button{
+  margin-top:20px;
+  margin-left: 1510px;
+}
 
 
 .button{
@@ -18,6 +22,7 @@
   background-color: var(--background);
   border: 2px var(--text-primary) solid;
   padding:10px 5px;
+/* float: right; */
   position: relative;
   overflow: hidden;
 
